@@ -1,0 +1,24 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tailwindcss -i ./static/src/main.css -o static/css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diabyml/flask-ecommerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diabyml/flask-ecommerce/issues"
+  },
+  "homepage": "https://github.com/diabyml/flask-ecommerce#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.18"
+  }
+}

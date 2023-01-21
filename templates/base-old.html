@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/style.css') }}"
+    />
+    <title>Dambeshop</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <header class="bg-white py-4 px-4 border-b">
+      <div class="container mx-auto flex justify-between">
+        <!-- logo container -->
+        <div>
+          <a href="/" class="text-indigo-500">
+            <h1>Dambeshop</h1>
+          </a>
+        </div>
+        <div class="flex space-x-4">
+          <a href="/products/Hommes">Hommes</a>
+          <a href="/products/Femmes">Femmes</a>
+          <a href="/products/Arts">Arts</a>
+          <a href="/products/Divers">Divers</a>
+        </div>
+      </div>
+    </header>
+    <main class="grow">
+      <!-- main content of the app -->
+      {% block content %}{% endblock %}
+    </main>
+    <footer class="">
+      <!-- footer -->
+      <h1>FOOTER</h1>
+    </footer>
+
+    <!-- load script -->
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='app.js') }}"
+    ></script>
+
+    <script>
+      document.querySelector("#btn-menu").addEventListener("click", () => {
+        console.log("toggle nav");
+        document.querySelector("#mobile-menu").classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+{% extends "base.html" %} {% block content %}
+<!-- <div class="container mx-auto">
+  <h2>{{ product['name'] }}</h2>
+  <img
+    src="{{ url_for('display_image', filename=product['unique_filename']) }}"
+    alt=""
+  />
+  <p>{{product['price']}}</p>
+  <p>{{product['description']}}</p>
+  <div>
+    <input
+      type="submit"
+      value="Buy"
+      class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-indigo-700 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600"
+    />
+  </div>
+</div> -->
+
+<!-- product detail -->
+<section class="text-gray-700 body-font overflow-hidden bg-white">
+  <div class="container px-5 py-4 mx-auto">
+    <div class="lg:w-4/5 mx-auto flex flex-wrap">
+      <img
+        alt="ecommerce"
+        class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"
+        src="{{ url_for('display_image', filename=product['unique_filename']) }}"
+      />
+      <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+        <h2 class="text-sm title-font text-gray-500 tracking-widest">
+          Dambeshop
+        </h2>
+        <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">
+          {{product['name']}}
+        </h1>
+        <div class="flex mb-4"></div>
+        <p class="leading-relaxed">
+          {{product['description']}}
+        </p>
+        <div
+          class="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5"
+        ></div>
+        <div class="flex items-center">
+          <span class="title-font font-medium text-2xl text-gray-900"></span>
+            {{product['price']}} FCFA</span
+          >
+          <button
+            class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"
+          >
+            <a href="tel:{{product['admin_phone']}}">Appeler</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
